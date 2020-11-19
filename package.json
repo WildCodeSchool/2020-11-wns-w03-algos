@@ -1,0 +1,20 @@
+{
+  "name": "w03-algo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/runner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "serve": "ts-node src/runner.ts"
+  },
+  "keywords": [],
+  "author": "Aurélien",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}
