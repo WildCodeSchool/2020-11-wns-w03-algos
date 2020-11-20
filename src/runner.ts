@@ -58,7 +58,6 @@ function deepEqual(expected, submitted): boolean {
             } else {
                 for (let i = 0; i < submitted.length; i++) {
                     if (deepEqual(expected[i], submitted[i]) === false) {
-                        console.log(expected[i], submitted[i])
                         return false;
                     }
                 }
@@ -69,7 +68,6 @@ function deepEqual(expected, submitted): boolean {
             const submittedKeys = Object.keys(submitted).filter(key => submitted[key] !== undefined).sort();
             if (deepEqual(expectedKeys, submittedKeys) === false
                 || deepEqual(expectedKeys.map(e => expected[e]), submittedKeys.map(e => submitted[e])) === false) {
-                console.log(expectedKeys, submittedKeys)
                 return false;
             }
             return true;
