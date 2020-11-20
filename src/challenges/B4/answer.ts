@@ -1,7 +1,12 @@
 /**
  * In this challenge, you have to regroup submissions by the month they got submitted
  * The result should be an array containing one object for each month. These objects
- * must be sorted chronoligically (oldest first). 
+ * must be sorted chronoligically (oldest first) based on their month property (ISO8601 datetime).
+ * Please note that the date of a month will be the first day of this month at midnigth (ISO8601)
+ * For instance, the datetime of novembre is: "2020-11-01T00:00:00.000Z"
+ * 
+ * You have to manipulate dates in vanillaJS. Be carefull to call, if needed, setUTCHours, setUTCMinutes, ... 
+ * instead of setHouts, setMinutes, ... to avoid timezone offsets!
  * 
  * Example:
  * Input: [

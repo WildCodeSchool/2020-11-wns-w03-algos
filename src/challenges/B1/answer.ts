@@ -1,6 +1,6 @@
 /**
- * In this challenge, you must sort events chronologically (earlier to later) based on 
- * their startDatetime. If some events have the same startDatetime, then the shorted must appear
+ * In this challenge, you must sort events chronologically (oldest to latest) based on 
+ * their startDatetime prop. If some events have the same startDatetime, then the shortest must appear
  * first
  * 
  * @param events Unsorted list of events
@@ -9,7 +9,7 @@
 
 // ↓ uncomment bellow lines and add your response!
 /*
-export default function ({ events }: {events: EventDatetime[] }): EventDatetime[] {
+export default function ({ events }: { events: EventDatetime[] }): EventDatetime[] {
     return [];
 }
 */

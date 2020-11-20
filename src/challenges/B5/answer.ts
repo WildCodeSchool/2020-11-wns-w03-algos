@@ -1,6 +1,9 @@
 /**
- * In this challenge, you have to split up a video in several succesive segments 
+ * In this challenge, you have to split up a video in several successive segments 
  * that can be either segments with notes or without.
+ * 
+ * Successive = the end time of a segment must be the start time of the next one.
+ * Also FYI, duration are in the format "HH:mm:ss" (hours, minutes, seconds)
  * 
  * Example:
  * Input: {

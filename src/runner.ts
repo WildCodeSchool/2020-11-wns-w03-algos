@@ -40,7 +40,7 @@ const NS_PER_SEC = 1e9;
     }
 
     if(challenges === 0) {
-        console.warn(`No challenge executed, uncomment export function in ./src/challenges/X/answer.ts file to try solving some of them!`);
+        console.warn(`🤔 No challenge executed, uncomment export function in ./src/challenges/X/answer.ts file to try solving some of them!`);
     }
 })();
 

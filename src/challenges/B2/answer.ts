@@ -3,7 +3,7 @@
  * must be unique and sorted from A to Z.
  * 
  * @param events List of events with their categories
- * @returns All existing categories sorted alphabatically without duplicates
+ * @returns All existing categories sorted alphabatically without duplicates (A to Z)
  */
 
 // ↓ uncomment bellow lines and add your response!
