@@ -18,15 +18,15 @@ export default [
         "age": 28
     },
     {
+      "name": "Mathieu",
+      "age": 28
+  },
+    {
         "name": "Joseph",
         "age": 28
     },
     {
         "name": "Marine",
-        "age": 28
-    },
-    {
-        "name": "Mathieu",
         "age": 28
     },
     {
