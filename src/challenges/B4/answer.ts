@@ -49,11 +49,34 @@
  */
 
 // ↓ uncomment bellow lines and add your response!
-/*
+
 export default function ({ submissions }: {submissions: Submission[] }): MonthSubmission[] {
-    return [];
+    let monthsMap: MonthSubmission [] = [];
+    for (const submission of submissions) {
+        const firstDayOfMonth = new Date(submission.submittedAt);
+        firstDayOfMonth.setUTCDate(1);
+        firstDayOfMonth.setUTCHours(0,0,0,0);
+        const dAsString = firstDayOfMonth.toISOString();
+        const monthExist = monthsMap.find(m => m.month === dAsString);
+        
+        if(monthExist === undefined) {
+            // month does not exist
+            monthsMap.push({
+                month: dAsString,
+                submissions: [submission]
+            });
+        }else{
+            // if month exist, add submission to it
+            monthExist.submissions.push(submission);
+            monthExist.submissions.sort((a, b) => new Date(a.submittedAt).getTime() - new Date(b.submittedAt).getTime());
+        }
+    }
+    // sort monthsMap by month
+    return monthsMap.sort((a, b) => {
+        return new Date(a.month).getTime() - new Date(b.month).getTime();
+    });
 }
-*/
+
 
 // used interfaces, do not touch
 export interface Submission {

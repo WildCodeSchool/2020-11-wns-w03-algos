@@ -21,11 +21,24 @@
  */
 
 // ↓ uncomment bellow lines and add your response!
-/*
+
 export default function ({ events }: { events: Event[] }): PlanningSlot[] {
-    return [];
+      const slots: PlanningSlot[] = [];
+    ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].forEach(day => {
+        for (let i = 0; i < 24; i++) {
+            const startTime = (i >= 10 ? '' : '0') + i + ':00';
+            const end = i + 1;
+            const endTime = end === 24 ? '00:00' : ((end >= 10 ? '' : '0') + end + ':00');
+            const event = events.find((event) => 
+                                event.day === day 
+                                && (event.endTime === '00:00' ? '24:00' : event.endTime) >= (endTime === '00:00' ? '24:00' : endTime)
+                                && event.startTime <= startTime);
+            slots.push({ startTime, endTime, day, event });
+        }
+    });
+    return slots;
 }
-*/
+
 
 // used interfaces, do not touch
 export interface Event {

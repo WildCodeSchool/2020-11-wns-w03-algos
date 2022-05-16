@@ -1,4 +1,4 @@
-import { GroupWithSills } from "./answer";
+import { GroupWithSkills } from "./answer";
 
 export default {
     groups: [
@@ -19,4 +19,5 @@ export default {
             skills: ["HTML", "Java", "PHP", "MySQL"]
         }
     ]
-} as { groups: GroupWithSills[] };
+} as { groups: GroupWithSkills[] };
+
