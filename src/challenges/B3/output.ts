@@ -1,4 +1,4 @@
-import { GroupWithSkillsAndClosestGroups } from "./answer";
+import { GroupWithSillsAndClosestGroups } from "./answer";
 
 export default [
     {
@@ -87,4 +87,4 @@ export default [
             }
         ]
     }
-] as GroupWithSkillsAndClosestGroups[];
+] as GroupWithSillsAndClosestGroups[];
